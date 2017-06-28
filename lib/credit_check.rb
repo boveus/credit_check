@@ -8,16 +8,16 @@ class CreditCard
     @number = number
     @valid = valid
   end
-    def is_valid?
+  def is_valid?
       finalnumber = get_final_sum(@number)
-      if finalnumber % 10 == 0
+    if finalnumber % 10 == 0
         @valid = true
         print "#{number} is valid."
-      else
+    else
         print "#{number} is not valid."
-      end
     end
   end
+end
 
 #convert cc number to array
 def cc_number_toarray(ccnumber)
@@ -31,10 +31,10 @@ end
 # 15 iterates through the cc number for amex cards
 def transform_digits(ccnumber)
   ccnumber.each_with_index do |number, index|
-  if (ccnumber.length == 16 && index.even?)
+    if (ccnumber.length == 16 && index.even?)
       ccnumber[index] = sum_digits(number)
     end
-  if (ccnumber.length == 15 && index.odd?)
+    if (ccnumber.length == 15 && index.odd?)
       ccnumber[index] = sum_digits(number)
     end
   end
