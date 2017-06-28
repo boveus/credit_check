@@ -41,7 +41,7 @@ def transform_digits(ccnumber)
 end
 
 def right_digit(number)
-  number % 10
+  number.to_i % 10
 end
 
 def left_digit(number)
