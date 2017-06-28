@@ -58,10 +58,10 @@ end
 
 #add the converted numbers and return the total
 def add_cc_numbers(number)
-total = 0
-number.each do |ccnumber|
-  total = total + ccnumber.to_i
-end
+  total = 0
+  number.each do |ccnumber|
+    total = total + ccnumber.to_i
+  end
   return total
 end
 
